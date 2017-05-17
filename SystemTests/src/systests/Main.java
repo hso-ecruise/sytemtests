@@ -1,20 +1,21 @@
 package systests;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.core.Response;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Main
 {
-	@GET
-	@Path("/{param}")
-	public Response getMsg(@PathParam("param") String msg) {
 
-		String output = "Jersey say : " + msg;
-
-		return Response.status(200).entity(output).build();
-
+	public static void main(String args[]) throws Exception
+	{
+		String sURL = "https://api.ecruise.me/v1/trips?filterbystate=FINISHED";
+		String singleSUrl = "https://api.ecruise.me/v1/cars/0";
+		JsonParser jsParser = new JsonParser();
+		
+		JSONObject myObj = jsParser.parseObject(singleSUrl);
+		JSONArray myArray = jsParser.parseArray(sURL);
+		System.out.println(myObj);
+		System.out.println(myArray);
 	}
-
 }
+
