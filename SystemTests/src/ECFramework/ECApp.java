@@ -33,10 +33,10 @@ public class ECApp
 		try
 		{
 			HttpPost request = new HttpPost(sUrl);
-			StringEntity sEntity = new StringEntity("{\"BookingId\" : 100," + 
-												     "\"CustomerId\": 1," + 
-												     "\"TripId\": 1," +
-												     "\"InvoiceItemId\": 1," +
+			StringEntity sEntity = new StringEntity("{\"BookingId\" : 0," + 
+												     "\"CustomerId\": 0," + 
+												     "\"TripId\": 0," +
+												     "\"InvoiceItemId\": 0," +
 												     "\"BookedPositionLatitude\": 11," +
 												     "\"BookedPositionLongitude\": 12," +
 												     "\"BookingDate\": \"2017-05-21T23:30:33.713Z\"," +
@@ -50,7 +50,7 @@ public class ECApp
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			StringBuilder sb = new StringBuilder();
-			String line;
+			String line = "";
 			while((line = br.readLine()) != null)
 			{
 				sb.append(line);
