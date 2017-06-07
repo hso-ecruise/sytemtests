@@ -18,9 +18,10 @@ public class Main
 		System.out.println(myObj);
 		System.out.println(myArray);*/
 		
-		ECApp.testLoadingStations();
+		//ECApp.testLoadingStations();
 		
-		System.out.println(ECApp.testBooking());
+		//System.out.println(ECApp.testBooking());
+		ECApp.testCarAvaliability(1);
 	}
 }
 

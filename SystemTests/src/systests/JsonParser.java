@@ -11,6 +11,12 @@ import org.json.JSONTokener;
 
 public class JsonParser
 {
+	/*
+	 * This function parses an jsonObject from given URL
+	 * 
+	 * @param sUrl in string form to be parsed
+	 * @return parsed Json Object from url
+	 */
 	public JSONObject parseObject(String sUrl) throws JSONException, IOException
 	{
 		URL url = new URL(sUrl);
@@ -19,6 +25,12 @@ public class JsonParser
 		return json;
 	}
 	
+	/*
+	 * This function parses an jsonArray from given URL
+	 * 
+	 * @param sUrl url in string form to be parsed
+	 * @return parsed Json Array from url
+	 */
 	public JSONArray parseArray(String sUrl) throws JSONException, IOException
 	{
 		URL url = new URL(sUrl);
@@ -27,6 +39,12 @@ public class JsonParser
 		return json;
 	}
 	
+	/*
+	 * This function parses an jsonObject from given InputStream
+	 * 
+	 * @param is InputStream to be parsed
+	 * @return parsed Json Object from InputStream
+	 */
 	public JSONObject parseObject(InputStream is) throws JSONException, IOException
 	{
 		JSONTokener tokener = new JSONTokener(is);
@@ -34,6 +52,12 @@ public class JsonParser
 		return json;
 	}
 	
+	/*
+	 * This function parses an jsonArray from given InputStream
+	 * 
+	 * @param is InputStream to be parsed
+	 * @return parsed Json Array from InputStream
+	 */
 	public JSONArray parseArray(InputStream is) throws JSONException, IOException
 	{
 		JSONTokener tokener = new JSONTokener(is);
